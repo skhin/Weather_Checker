@@ -1,10 +1,12 @@
 import React from "react";
+import Weather from "./components/Weather";
 
 function App() {
   return (
-    <div>
-      <h2>GA SEI-33</h2>
-    </div>
+    <>
+      <header>WEATHER CHECKER</header>
+      <Weather />
+    </>
   );
 }
 
