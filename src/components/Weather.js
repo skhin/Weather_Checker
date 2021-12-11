@@ -18,55 +18,55 @@ const Weather = (props) => {
       date: new Date(response.data.dt * 1000),
     });
   }
+};
 
-  if (weatherData.ready) {
-    return (
-      <>
-        <Search defaultCity="Singapore" />
-        <br />
-        <div className="container default-city">
-          <div className="row align-items-start">
-            <div className="col-md-6">
-              <h2>{weatherData.city}</h2>
-              <ul className="city-list">
-                <li className="city-date">
-                  <FormatDate date={weatherData.date} />
-                </li>
+if (weatherData.ready) {
+  return (
+    <>
+      <Search defaultCity="Singapore" />
+      <br />
+      <div className="container default-city">
+        <div className="row align-items-start">
+          <div className="col-md-6">
+            <h2>{weatherData.city}</h2>
+            <ul className="city-list">
+              <li className="city-date">
+                <FormatDate date={weatherData.date} />
+              </li>
 
-                <li className="city-desc">{weatherData.description}</li>
-              </ul>
-              <div className="row">
-                <div className="col-6 icon-img">
-                  <img
-                    src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                    alt="Mostly Cloudy"
-                  />
-                  <span className="temp">
-                    <strong>{weatherData.temperature} </strong>
-                  </span>
-                  <span className="unit">℃</span>
-                  <br />
+              <li className="city-desc">{weatherData.description}</li>
+            </ul>
+            <div className="row">
+              <div className="col-6 icon-img">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt="Mostly Cloudy"
+                />
+                <span className="temp">
+                  <strong>{weatherData.temperature} </strong>
+                </span>
+                <span className="unit">℃</span>
+                <br />
 
-                  <ul className="sun-times">
-                    <li>🌅 Sunrise: {weatherData.sunrise}am</li>
-                    <li>🌇 Sunset: {weatherData.sunset}pm</li>
-                  </ul>
-                </div>
+                <ul className="sun-times">
+                  <li>🌅 Sunrise: {weatherData.sunrise}am</li>
+                  <li>🌇 Sunset: {weatherData.sunset}pm</li>
+                </ul>
               </div>
             </div>
-            <button>FORECAST</button>
-            <button>REMOVE CITY</button>
           </div>
+          <button>FORECAST</button>
+          <button>REMOVE CITY</button>
         </div>
-      </>
-    );
-  } else {
-    const apiKey = "7e0a2a9bd62699b486b833f59a096759";
-    const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+      </div>
+    </>
+  );
+} else {
+  const apiKey = "7e0a2a9bd62699b486b833f59a096759";
+  const apiUrl = `http://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(handleResponse);
 
-    return "Please hold. Page is Loading ....";
-  }
-};
+  return "Please hold. Page is Loading ....";
+}
 
 export default Weather;

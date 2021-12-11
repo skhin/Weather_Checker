@@ -1,26 +1,9 @@
 import React from "react";
 
 const FormatDate = (props) => {
-  console.log(props.date);
+  // console.log(props.date);
 
   // Day, Date, Month
-  //   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  //   let day = days[props.date.getDay()];
-
-  //   let month = [
-  //     "Jan",
-  //     "Feb",
-  //     "Mar",
-  //     "Apr",
-  //     "May",
-  //     "Jun",
-  //     "Jul",
-  //     "Aug",
-  //     "Sep",
-  //     "Oct",
-  //     "Nov",
-  //     "Dec",
-  //   ];
 
   let now = new Date();
   let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
