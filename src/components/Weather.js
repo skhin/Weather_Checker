@@ -14,6 +14,7 @@ const Weather = (props) => {
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
       description: response.data.weather[0].description,
+      icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
       date: new Date(response.data.dt * 1000),
@@ -50,11 +51,7 @@ const Weather = (props) => {
               />
             </div>
             <div className="col-3">
-              <input
-                type="submit"
-                value="Search"
-                className="btn btn-primary w-100"
-              />
+              <input type="submit" value="Search" className="btn btn-primary" />
             </div>
           </div>
         </form>

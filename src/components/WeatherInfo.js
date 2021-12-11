@@ -1,5 +1,6 @@
 import React from "react";
 import FormatDate from "./FormatDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 const WeatherInfo = (props) => {
   return (
@@ -17,26 +18,21 @@ const WeatherInfo = (props) => {
             </ul>
             <div className="row">
               <div className="col-6 icon-img">
-                <img
-                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-                  alt="Mostly Cloudy"
-                />
-                <span className="temp">
-                  <strong>{props.data.temperature} </strong>
-                </span>
-                <span className="unit">℃</span>
-                <br />
-
-                <ul className="sun-times">
-                  <li>🌅 Sunrise: {props.data.sunrise}am</li>
-                  <li>🌇 Sunset: {props.data.sunset}pm</li>
-                </ul>
+                <img src={props.data.icon} alt={props.data.description} />
+                <WeatherTemperature celcius={props.data.temperature} />
               </div>
+              <br />
+
+              <ul className="sun-times">
+                <li>🌅 Sunrise: {props.data.sunrise}am</li>
+                <li>🌇 Sunset: {props.data.sunset}pm</li>
+              </ul>
             </div>
           </div>
-          <button>FORECAST</button>
-          <button>REMOVE CITY</button>
         </div>
+        <br />
+        <button>FORECAST</button>
+        <button>REMOVE CITY</button>
       </div>
     </>
   );
