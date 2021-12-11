@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Search from "./Search";
+import FormatDate from "./FormatDate";
 
 const Weather = (props) => {
   const [weatherData, setWeatherData] = useState({ ready: false });
 
   function handleResponse(response) {
-    // console.log(response.data);
+    console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),
@@ -14,7 +15,7 @@ const Weather = (props) => {
       description: response.data.weather[0].description,
       sunrise: response.data.sys.sunrise,
       sunset: response.data.sys.sunset,
-      date: "11 Dec",
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -28,8 +29,10 @@ const Weather = (props) => {
             <div className="col-md-6">
               <h2>{weatherData.city}</h2>
               <ul className="city-list">
-                <li className="city-date">Sat, {weatherData.date}</li>
-                <li className="city-time">12.09am</li>
+                <li className="city-date">
+                  <FormatDate date={weatherData.date} />
+                </li>
+
                 <li className="city-desc">{weatherData.description}</li>
               </ul>
               <div className="row">
