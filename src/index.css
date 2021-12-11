@@ -78,6 +78,10 @@ h2 {
   margin-top: 6px;
 }
 
+.city-desc {
+  text-transform: capitalize;
+}
+
 img {
   height: 64px;
   float: left;

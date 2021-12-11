@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <header>WEATHER CHECKER</header>
-      <Weather />
+      <Weather defaultCity="Singapore" />
     </>
   );
 }
