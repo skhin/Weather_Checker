@@ -1,6 +1,6 @@
 import React from "react";
 
-const FormatDate = (props) => {
+const FormattedDate = (props) => {
   // console.log(props.date);
 
   // Day, Date, Month
@@ -51,4 +51,4 @@ const FormatDate = (props) => {
   );
 };
 
-export default FormatDate;
+export default FormattedDate;
