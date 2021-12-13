@@ -19,7 +19,7 @@ const WeatherInfo = (props) => {
             <div className="row">
               <div className="col-6 icon-img">
                 <img src={props.data.icon} alt={props.data.description} />
-                <WeatherTemperature celcius={props.data.temperature} />
+                <WeatherTemperature celsius={props.data.temperature} />
               </div>
               <br />
 

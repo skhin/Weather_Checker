@@ -8,15 +8,15 @@ const Weather = (props) => {
   const [city, setCity] = useState(props.defaultCity);
 
   const handleResponse = (response) => {
-    console.log(response.data);
+    // console.log(response.data);
     setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
       description: response.data.weather[0].description,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
-      sunrise: response.data.sys.sunrise,
-      sunset: response.data.sys.sunset,
+      sunrise: new Date(response.data.sys.sunrise * 1000),
+      sunset: new Date(response.data.sys.sunset * 1000),
       date: new Date(response.data.dt * 1000),
     });
   };
