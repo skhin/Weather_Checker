@@ -22,18 +22,16 @@ const WeatherInfo = (props) => {
       <div className="d-flex">
         <WeatherTemperature celsius={props.data.temperature} />
       </div>
-
+      <br />
+      <ul>
+        <li>Humidity: {props.data.humidity}%</li>
+        <li>Wind: {props.data.wind} km/h</li>
+      </ul>
       <div className="row mt-3">
         <div className="col-6">
           <div className="d-flex">
             <div className="float-left"></div>
           </div>
-        </div>
-        <div className="col-6">
-          <ul>
-            <li>Humidity: {props.data.humidity}%</li>
-            <li>Wind: {props.data.wind} km/h</li>
-          </ul>
         </div>
       </div>
       <br />

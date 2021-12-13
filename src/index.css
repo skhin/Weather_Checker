@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
   background: radial-gradient(
     907px at 3.4% 19.8%,
     rgb(255, 243, 122) 0%,
@@ -32,4 +33,25 @@ header {
   padding: 20px;
   font-size: 50px;
   font-weight: bolder;
+}
+
+li {
+  list-style: none;
+}
+
+h3 {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.weather-wrapper,
+.forecast-wrapper {
+  margin: 30px;
+  padding: 5px;
+  justify-content: center;
+  border: 2px solid blue;
+  border-radius: 20px;
 }

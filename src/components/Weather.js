@@ -59,13 +59,19 @@ const Weather = (props) => {
             </div>
           </div>
         </form>
-        <WeatherInfo data={weatherData} />
-        <WeatherForecast coordinates={weatherData.coordinates} />
+        <br />
+        <div className="weather-wrapper">
+          <WeatherInfo data={weatherData} />
+        </div>
+        <div className="forecast-wrapper">
+          <h3>Forecast for the next 5 days</h3>
+          <WeatherForecast coordinates={weatherData.coordinates} />
+        </div>
       </div>
     );
   } else {
     search();
-    return "Loading...";
+    return "Please hold. Page is Loading...";
   }
 };
 
