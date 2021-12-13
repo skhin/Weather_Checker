@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import Forecast from "./Forecast";
 import WeatherInfo from "./WeatherInfo";
 
 const Weather = (props) => {
@@ -56,6 +56,9 @@ const Weather = (props) => {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
+        <div className="forecast">
+          <Forecast />
+        </div>
       </div>
     );
   } else {

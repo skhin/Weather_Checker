@@ -10,7 +10,12 @@ html {
 
 body {
   margin: 0;
-  background-color: rgb(240, 233, 233);
+  background: radial-gradient(
+    907px at 3.4% 19.8%,
+    rgb(255, 243, 122) 0%,
+    rgb(255, 102, 145) 97.4%
+  );
+  color: #164785;
 }
 
 .centered {
@@ -41,7 +46,7 @@ form {
 }
 
 .default-city {
-  border: 1px solid rgb(41, 39, 39);
+  border: 2px solid rgb(41, 39, 39);
   padding: 10px;
   margin: 30px auto;
   text-align: center;
@@ -98,4 +103,8 @@ img {
   position: relative;
   top: -20px;
   line-height: 1;
+}
+
+.forecast {
+  border: 2px solid lightslategray;
 }
