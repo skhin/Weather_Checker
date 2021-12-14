@@ -64,7 +64,7 @@ const Weather = (props) => {
           <WeatherInfo data={weatherData} />
         </div>
         <div className="forecast-wrapper">
-          <h3>Forecast for the next 5 days</h3>
+          <h3>Forecast for the next 6 days</h3>
           <WeatherForecast coordinates={weatherData.coordinates} />
         </div>
       </div>
