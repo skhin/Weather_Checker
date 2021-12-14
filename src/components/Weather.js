@@ -7,7 +7,7 @@ const Weather = (props) => {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
-  function handleResponse(response) {
+  const handleResponse = (response) => {
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
@@ -19,20 +19,20 @@ const Weather = (props) => {
       wind: response.data.wind.speed,
       city: response.data.name,
     });
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     search();
-  }
+  };
 
-  function handleCityChange(event) {
+  const handleCityChange = (event) => {
     setCity(event.target.value);
-  }
+  };
 
   function search() {
     const apiKey = "7e0a2a9bd62699b486b833f59a096759";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 

@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 
 const WeatherTemperature = (props) => {
+  // default unit state will be celsius
   const [unit, setUnit] = useState("celsius");
-  function showFahrenheit(event) {
+
+  const showFahrenheit = (event) => {
     event.preventDefault();
     setUnit("fahrenheit");
-  }
+  };
 
-  function showCelsius(event) {
+  const showCelsius = (event) => {
     event.preventDefault();
     setUnit("celsius");
-  }
+  };
 
-  function fahrenheit() {
+  const fahrenheit = () => {
     return (props.celsius * 9) / 5 + 32;
-  }
+  };
 
   if (unit === "celsius") {
     return (

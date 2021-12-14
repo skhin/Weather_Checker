@@ -28,9 +28,12 @@ const WeatherInfo = (props) => {
         <li>Wind: {props.data.wind} km/h</li>
       </ul>
       <div className="row mt-3">
-        <div className="col-6">
+        <div className="col-3">
           <div className="d-flex">
-            <div className="float-left"></div>
+            <div className="float-left">
+              <button>FORECAST</button>
+              <button>REMOVE CITY</button>
+            </div>
           </div>
         </div>
       </div>
