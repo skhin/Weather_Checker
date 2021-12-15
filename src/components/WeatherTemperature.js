@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 const WeatherTemperature = (props) => {
+  // console.log(props);
   // default unit state will be celsius
   const [unit, setUnit] = useState("celsius");
 

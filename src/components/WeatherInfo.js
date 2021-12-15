@@ -26,6 +26,7 @@ const WeatherInfo = () => {
       );
 
       const { dt, weather, temp, sunrise, sunset } = res.data.current;
+      console.log(res);
 
       const currentData = {
         id: new Date().getTime(),
@@ -34,7 +35,7 @@ const WeatherInfo = () => {
         time: dt,
         cond: weather[0].main,
         icon: weather[0].icon,
-        temp,
+        temp: temp,
         sunrise: sunrise,
         sunset: sunset,
         forecast: res.data.daily.slice(1, 6),

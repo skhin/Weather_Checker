@@ -42,9 +42,7 @@ const WeatherInfoCard = ({ weather }) => {
           alt="icon"
         />
         <span>
-          {/* <WeatherTemperature /> */}
-          {Math.round(weather.temp)} °C |{" "}
-          {Math.round(weather.temp * (9 / 5) + 32)} °F
+          <WeatherTemperature celsius={weather.temp} />
         </span>
       </div>
 
