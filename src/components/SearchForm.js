@@ -1,13 +1,13 @@
 import axios from "axios";
 import moment from "moment";
 import React, { useState, useContext } from "react";
-import weatherContext from "./context/weather-context";
+import WeatherContext from "../context/weather-context";
 
 const SearchForm = () => {
   const [search, setSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
-  const actionSearchCity = useContext(weatherContext);
+  const { actionSearchCity } = useContext(WeatherContext);
 
   const ApiKey = process.env.REACT_APP_API_KEY;
 

@@ -2,15 +2,16 @@ import React, { useEffect, useState, useContext } from "react";
 import WeatherInfoCard from "./WeatherInfoCard";
 import axios from "axios";
 import moment from "moment";
-import weatherContext from "./context/weather-context";
 
-const defaultCity = ["Singapore", "Brisbane", "Brno"];
+import WeatherContext from "../context/weather-context";
+
+const defaultCity = ["Singapore", "Brisbane", "Prague"];
 
 const WeatherInfo = () => {
   const [storeData, setStoreData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  const { weather, actionDefaultWeather } = useContext(weatherContext);
+  const { weather, actionDefaultWeather } = useContext(WeatherContext);
 
   const ApiKey = process.env.REACT_APP_API_KEY;
 

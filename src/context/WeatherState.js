@@ -1,6 +1,7 @@
 import React, { useReducer } from "react";
-import weatherContext from "./weather-context";
+import WeatherContext from "./weather-context";
 import weatherReducer from "./weather-reducer";
+
 import * as weatherTypes from "./weather-type";
 
 const WeatherState = (props) => {
@@ -40,7 +41,7 @@ const WeatherState = (props) => {
   };
 
   return (
-    <weatherContext.Provider
+    <WeatherContext.Provider
       value={{
         weather: state.weather,
         forecast: state.forecast,
@@ -51,7 +52,7 @@ const WeatherState = (props) => {
       }}
     >
       {props.children}
-    </weatherContext.Provider>
+    </WeatherContext.Provider>
   );
 };
 

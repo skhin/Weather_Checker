@@ -2,7 +2,6 @@ import moment from "moment";
 import React from "react";
 
 const ForecastCard = ({ data }) => {
-  console.log(data);
   return (
     <div className="forecast_card">
       <p>{data.weather[0].main}</p>
