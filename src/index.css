@@ -31,7 +31,12 @@ body {
 }
 
 .header h1 {
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: bolder;
+}
+
+h1 {
+  text-transform: uppercase;
 }
 
 /* ****************************************** */
@@ -56,14 +61,14 @@ body {
 /* ****************************************** */
 .weather_card {
   width: 270px;
-  border: 1px solid whitesmoke;
+  border: 1px solid slategrey;
   padding: 10px;
   border-radius: 5px;
   margin: 10px;
 }
 
 .weather_card.active {
-  border: 1px solid #2ecc71;
+  border: 1px solid slateblue;
 }
 
 .weather_card h1 {
@@ -88,14 +93,22 @@ body {
   color: white;
 }
 
+.weatherinfo-card {
+}
+
 /* ****************************************** */
 
 .weather_info {
   display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
 /* ****************************************** */
 .forecast {
   padding-bottom: 100px;
@@ -112,7 +125,7 @@ body {
 }
 
 .forecast_card {
-  border: 1px solid whitesmoke;
+  border: 1px solid navy;
   width: 170px;
   text-align: center;
   padding: 10px;
