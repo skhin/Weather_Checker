@@ -10,7 +10,7 @@ const WeatherInfo = () => {
   const [storeData, setStoreData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  //const { weather, actionDefaultWeather } = useContext(weatherContext);
+  const { weather, actionDefaultWeather } = useContext(weatherContext);
 
   const ApiKey = process.env.REACT_APP_API_KEY;
 
@@ -50,20 +50,19 @@ const WeatherInfo = () => {
     defaultCity.map((dcity) => fetchApi(dcity));
   }, []);
 
-  // useEffect(() => {
-  //   actionDefaultWeather(storeData);
-  // }, [storeData]);
+  useEffect(() => {
+    actionDefaultWeather(storeData);
+  }, [storeData]);
 
   return (
     <div className="weather_info">
-      Hello
-      {/* {isLoading ? (
+      {isLoading ? (
         <h3>Loading...</h3>
       ) : (
         weather.map((weather, ind) => (
           <WeatherInfoCard key={ind} weather={weather} />
         ))
-      )} */}
+      )}
     </div>
   );
 };
