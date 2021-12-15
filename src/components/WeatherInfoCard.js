@@ -2,6 +2,7 @@ import moment from "moment";
 import React, { useContext } from "react";
 import WeatherContext from "../context/weather-context";
 import WeatherTemperature from "./WeatherTemperature";
+import FormattedDate from "./FormattedDate";
 
 const WeatherInfoCard = ({ weather }) => {
   const { forecast, actionForecast, actionRemoveWeather } =
@@ -24,6 +25,7 @@ const WeatherInfoCard = ({ weather }) => {
         "linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%)";
     }
   };
+  console.log(weather);
 
   return (
     <div classname="weatherinfo-card">
@@ -33,6 +35,9 @@ const WeatherInfoCard = ({ weather }) => {
         }`}
       >
         <h1>{weather.cityName}</h1>
+        {/* <p>
+          <FormattedDate date={weather} />
+        </p> */}
         <p>{weather.date}</p>
         <p>{moment(weather.time * 1000).format("h:mm a")}</p>
         <p>{weather.cond}</p>

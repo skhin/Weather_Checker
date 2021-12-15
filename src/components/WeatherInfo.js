@@ -26,7 +26,7 @@ const WeatherInfo = () => {
       );
 
       const { dt, weather, temp, sunrise, sunset } = res.data.current;
-      console.log(res);
+      // console.log(res.data.current);
 
       const currentData = {
         id: new Date().getTime(),
