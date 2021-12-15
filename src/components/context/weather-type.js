@@ -1,0 +1,4 @@
+export const FORECAST = "FORECAST";
+export const SEARCH_CITY = "SEARCH_CITY";
+export const DEFAULT_WEATHER = "DEFAULT_WEATHER";
+export const REMOVE_WEATHER = "REMOVE_WEATHER";

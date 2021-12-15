@@ -1,11 +1,16 @@
 import React from "react";
-import Weather from "./components/Weather";
+import Header from "./components/Header";
+import SearchForm from "./components/SearchForm";
+import WeatherInfo from "./components/WeatherInfo";
+import Forecast from "./components/Forecast";
 
 const App = () => {
   return (
     <>
-      <header>WEATHER CHECKER</header>
-      <Weather defaultCity="Singapore" />
+      <Header />
+      <SearchForm />
+      <WeatherInfo />
+      <Forecast />
     </>
   );
 };
