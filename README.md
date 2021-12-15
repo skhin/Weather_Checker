@@ -25,4 +25,4 @@ b. I found it was possible to put majority of your functions into a component an
 c. Another new development I learned was process.env whereby one can store your APIKeys safely without users abusing the info.
 
 React Hooks used for this project: useState, useReducer, useContext
-Imported axios (for API) and moment for the format of the time
+Imported moment for the format of the time
