@@ -17,7 +17,7 @@ const WeatherInfoCard = ({ weather }) => {
     ) {
       targetBody.style.color = "#164785";
       targetBody.style.background =
-        "radial-gradient(907px at 3.4% 19.8%, rgb(255, 243, 122) 0%, rgb(255, 102, 145) 97.4%)";
+        "background: radial-gradient(circle at 10% 20%, rgb(239, 246, 249) 0%, rgb(206, 239, 253) 90%)";
     } else {
       targetBody.style.color = "whitesmoke";
       targetBody.style.background =

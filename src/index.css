@@ -59,3 +59,7 @@ h3 {
 a {
   text-decoration: none;
 }
+
+h1 {
+  text-transform: capitalize;
+}
