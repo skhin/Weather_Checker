@@ -1,6 +1,7 @@
 # Weather_Checker
 
 For SEI Project 2, we were tasked with creating a React App using FreeApis and was given one week to create it.
+You can find the deployed site at "https://weather-checker-sk.netlify.app/"
 With me residing in my default city, it would be beneficial to know what the weather would be like over the next few days as well as to get a glimpse of what it would be like in other parts of the world.
 Hence, I chose to use the OPENWEATHERMAP API ("https://openweathermap.org/api"). This API targets the location of pretty much anywhere in the world to retrieve weather information for past, present and future.
 
@@ -24,7 +25,6 @@ a. Changing the temperature from ℃ to ℉ and vice versa. This will update the
 
 b. I found it was possible to put majority of your functions into a component and have it exported as a whole page instead of individually importing each component to every page. There could be a slip up of a missing component in your file which would result in the failure to compile. I used this to update all the state functions on one page.
 <img width="384" alt="Screenshot 2021-12-15 at 12 48 41 PM" src="https://user-images.githubusercontent.com/88125976/146125092-03e8f1e8-c957-4181-b30e-e97c5435b1ea.png">
-
 
 c. Another new development I learned was process.env whereby one can store your APIKeys safely without users abusing the info.
 <img width="390" alt="Screenshot 2021-12-15 at 12 47 17 PM" src="https://user-images.githubusercontent.com/88125976/146125047-a2e49af7-8780-4a33-a202-2beb5d062b3d.png">
