@@ -6,12 +6,12 @@ import Forecast from "./components/Forecast";
 
 const App = () => {
   return (
-    <>
+    <div className="container">
       <Header />
       <SearchForm />
       <WeatherInfo />
       <Forecast />
-    </>
+    </div>
   );
 };
 

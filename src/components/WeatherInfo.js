@@ -25,8 +25,9 @@ const WeatherInfo = () => {
         `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.city.coord.lat}&lon=${response.data.city.coord.lon}&exclude=minutely,hourly&units=metric&appid=${ApiKey}`
       );
 
+      console.log("res  ", res);
+
       const { dt, weather, temp, sunrise, sunset } = res.data.current;
-      // console.log(res.data.current);
 
       const currentData = {
         id: new Date().getTime(),
@@ -49,7 +50,9 @@ const WeatherInfo = () => {
   };
 
   useEffect(() => {
-    defaultCity.map((dcity) => fetchApi(dcity));
+    defaultCity.forEach((dcity) => {
+      fetchApi(dcity);
+    });
   }, []);
 
   useEffect(() => {
