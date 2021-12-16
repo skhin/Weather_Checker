@@ -6,7 +6,7 @@ import Forecast from "./components/Forecast";
 
 const App = () => {
   return (
-    <div className="container">
+    <div className="container clearfix">
       <Header />
       <SearchForm />
       <WeatherInfo />

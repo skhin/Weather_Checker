@@ -37,3 +37,11 @@ The default cities would usually follow the time and date of the 1st default cit
 
 React Hooks used for this project: useState, useReducer, useContext
 Imported moment for the format of the time
+
+> const handleSearch = async (e) => {
+
+    e.preventDefault();
+    if (!search) {
+      alert("Please enter city name to search !");
+      return false;
+    }

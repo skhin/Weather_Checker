@@ -1,17 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap");
 
+/* .clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  position: relative;
+  /* box-sizing: content-box; */
   font-family: "Oxygen", sans-serif;
 }
 
 .container {
-  margin: 0 auto;
+  margin: 0;
   max-width: 100%;
-  min-height: 100%;
   padding: 0 10px;
+  /* display: block;
+  overflow: auto; */
+  /* border: 3px solid red; */
+  padding-bottom: 0 !important;
 }
 
 /* html {
@@ -25,8 +35,9 @@ body {
     rgb(255, 102, 145) 97.4%
   );
   color: #164785;
-  min-height: 100vh;
-  margin: 0;
+  position: relative;
+  height: auto;
+  min-height: 100% !important;
 }
 
 .header {
@@ -123,6 +134,7 @@ a {
   position: relative;
   top: -210px;
   left: 0px;
+  /* display: none; */
 }
 
 .forecast .title {
