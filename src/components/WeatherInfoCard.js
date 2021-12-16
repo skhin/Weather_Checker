@@ -2,7 +2,7 @@ import moment from "moment";
 import React, { useContext } from "react";
 import WeatherContext from "../context/weather-context";
 import WeatherTemperature from "./WeatherTemperature";
-import FormattedDate from "./FormattedDate";
+// import FormattedDate from "./FormattedDate";
 
 const WeatherInfoCard = ({ weather }) => {
   const { forecast, actionForecast, actionRemoveWeather } =

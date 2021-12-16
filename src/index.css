@@ -6,6 +6,12 @@
   clear: both;
 } */
 
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 * {
   margin: 0;
   padding: 0;
@@ -36,8 +42,12 @@ body {
   );
   color: #164785;
   position: relative;
-  height: auto;
+  height: 100%;
   min-height: 100% !important;
+  /* overflow-x: hidden; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
 }
 
 .header {

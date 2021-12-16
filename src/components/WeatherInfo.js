@@ -18,9 +18,12 @@ const WeatherInfo = () => {
   const fetchApi = async (dcity) => {
     setIsLoading(true);
     try {
+      // fetches current weather
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?q=${dcity}&units=metric&appid=${ApiKey}`
       );
+
+      // fetches forecast data
       const res = await axios.get(
         `https://api.openweathermap.org/data/2.5/onecall?lat=${response.data.city.coord.lat}&lon=${response.data.city.coord.lon}&exclude=minutely,hourly&units=metric&appid=${ApiKey}`
       );
