@@ -53,7 +53,7 @@ const WeatherInfo = () => {
   };
 
   useEffect(() => {
-    defaultCity.forEach((dcity) => {
+    defaultCity.map((dcity) => {
       fetchApi(dcity);
     });
   }, []);

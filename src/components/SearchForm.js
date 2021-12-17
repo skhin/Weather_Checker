@@ -14,7 +14,7 @@ const SearchForm = () => {
   const handleSearch = async (e) => {
     e.preventDefault();
     if (!search) {
-      alert("Please enter city name to search !");
+      alert("Please enter a city to search !");
       return false;
     }
 
